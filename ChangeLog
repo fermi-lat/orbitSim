@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: peachey  Thu Jul 19 13:17:30 PDT 2007
+orbitSim/src/orbSim
+
+Modified Files:
+	main.cxx 
+Log Message:
+Don't use a path to gttakosim.par, just gttakosim.
+
+    *
+------------------------------------------------------------
 User: peachey  Thu Jul 19 13:15:24 PDT 2007
 orbitSim/pfiles
 
