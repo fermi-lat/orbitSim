@@ -3,4 +3,15 @@ package orbitSim
 version v0
 
 author Giuseppe Romeo <Giuseppe.Romeo@gsfc.nasa.gov>
-# $Id:$
+# $Id: requirements,v 1.1.1.1 2007/07/19 19:12:38 peachey Exp $
+
+use STpolicy *
+use st_app *
+use st_facilities *
+use tip *
+
+apply_pattern ST_library option=-no_share
+apply_pattern ST_pfiles
+
+private
+application gttakosim orbSim/*.cxx
