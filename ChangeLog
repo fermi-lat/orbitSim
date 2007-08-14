@@ -1,5 +1,18 @@
 ------------------------------------------------------------
 User: peachey  Tue Aug 14 11:29:03 PDT 2007
+orbitSim/src/orbSim
+
+Modified Files:
+	main.cxx 
+Log Message:
+Replace usage of code in regexp.h with platform independent string
+matching functions match_str, capitalize_str etc.
+Optmimize MakeAtt function for simple SURVEY mode observations.
+Fix memory leak in deallocateAttitude.
+
+    *
+------------------------------------------------------------
+User: peachey  Tue Aug 14 11:29:03 PDT 2007
 orbitSim/src
 
 Modified Files:
