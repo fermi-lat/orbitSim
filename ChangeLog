@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: golpa  Mon Oct  1 12:04:48 PDT 2007
+orbitSim/src/orbSim
+
+Modified Files:
+	main.cxx 
+Log Message:
+use commonUtilities
+    *
+------------------------------------------------------------
 TAG
 Tag name: v0r1, operation: add
 Package: orbitSim
