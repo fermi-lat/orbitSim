@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: peachey  Wed Oct  3 13:37:17 PDT 2007
+orbitSim/orbitSim
+
+Modified Files:
+	atFunctions.h 
+Log Message:
+Comment out use of regexp.h.
+
+    *
+------------------------------------------------------------
 User: golpa  Mon Oct  1 12:04:48 PDT 2007
 orbitSim/src/orbSim
 
