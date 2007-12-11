@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: golpa  Tue Dec 11 10:36:24 PST 2007
+orbitSim
+
+Added Files:
+	SConscript orbitSimLib.py 
+Log Message:
+Initial import of SCons files
+    *
+------------------------------------------------------------
 TAG
 Tag name: v0r1p1, operation: add
 Package: orbitSim
