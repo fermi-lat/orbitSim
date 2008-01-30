@@ -1,4 +1,30 @@
 ------------------------------------------------------------
+TAG
+Tag name: v0r1p2, operation: add
+Package: orbitSim
+User: peachey  Wed Jan 30 10:37:14 2008
+Files:
+  orbitSim/orbitSimLib.py  1.1
+  orbitSim/ChangeLog  1.22
+  orbitSim/SConscript  1.1
+  orbitSim/cmt/requirements  1.2
+  orbitSim/doc/release.notes  1.6
+  orbitSim/orbitSim/functions.h  1.2
+  orbitSim/orbitSim/atFunctions.h  1.2
+  orbitSim/orbitSim/OrbSim.h  1.1.1.1
+  orbitSim/orbitSim/orbitSimStruct.h  1.1.1.1
+  orbitSim/orbitSim/read_ephem.h  1.1.1.1
+  orbitSim/orbitSim/DynamicStruct.h  1.1.1.1
+  orbitSim/pfiles/gttakosim.par  1.1
+  orbitSim/src/functUtil.cxx  1.2
+  orbitSim/src/mainpage.h  1.1.1.1
+  orbitSim/src/atFunctions.cxx  1.1.1.1
+  orbitSim/src/read_ephem.cxx  1.4
+  orbitSim/src/OrbSim.cxx  1.4
+  orbitSim/src/orbSim/main.cxx  1.4
+
+    *
+------------------------------------------------------------
 User: peachey  Wed Jan 30 10:36:57 PST 2008
 orbitSim/doc
 
