@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: peachey  Wed Jan 30 10:52:00 PST 2008
+orbitSim/src
+
+Modified Files:
+	functUtil.cxx read_ephem.cxx 
+Log Message:
+New version from Giuseppe Romeo to address warnings from RM.
+    *
+------------------------------------------------------------
 TAG
 Tag name: orbitSim-00-01-02, operation: add
 Package: orbitSim
