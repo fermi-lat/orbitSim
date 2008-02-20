@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: golpa  Wed Feb 20 09:15:56 PST 2008
+orbitSim
+
+Modified Files:
+	SConscript orbitSimLib.py 
+Log Message:
+Include liborbitSim as a dependency of gttakosim, some cosmetic changes
+    *
+------------------------------------------------------------
 User: peachey  Wed Jan 30 10:53:40 PST 2008
 orbitSim/doc
 
