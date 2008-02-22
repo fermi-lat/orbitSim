@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: golpa  Thu Feb 21 17:34:34 PST 2008
+orbitSim
+
+Modified Files:
+	SConscript 
+Log Message:
+Add test app for SCons
+    *
+------------------------------------------------------------
 User: golpa  Wed Feb 20 09:15:56 PST 2008
 orbitSim
 
