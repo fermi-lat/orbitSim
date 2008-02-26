@@ -1,9 +1,10 @@
-#$Id: SConscript,v 1.2 2008/02/20 17:15:56 golpa Exp $
+#$Id: SConscript,v 1.3 2008/02/22 01:34:34 golpa Exp $
 Import('baseEnv')
 Import('listFiles')
 progEnv = baseEnv.Clone()
 libEnv = baseEnv.Clone()
 
+libEnv.Tool('orbitSimLib', depsOnly = 1)
 orbitSimLib = libEnv.StaticLibrary('orbitSim', listFiles(['src/*.cxx']))
 
 progEnv.Tool('orbitSimLib')
