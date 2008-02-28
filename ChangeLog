@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: peachey  Thu Feb 28 14:16:50 PST 2008
+orbitSim/src
+
+Modified Files:
+	OrbSim.cxx read_ephem.cxx 
+Log Message:
+New version from Giuseppe Romeo, changes to eliminate problems on Windows.
+    *
+------------------------------------------------------------
 User: peachey  Thu Feb 28 14:16:49 PST 2008
 orbitSim/orbitSim
 
