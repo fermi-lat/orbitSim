@@ -4,7 +4,7 @@
  * @author Giuseppe Romeo
  * @date Created:  Nov 15, 2005
  * 
- * $Header: /nfs/slac/g/glast/ground/cvs/orbitSim/src/read_ephem.cxx,v 1.4 2007/10/03 20:38:47 peachey Exp $
+ * $Header: /glast/GSSC/GSSC_Ext/OrbitSim/src/read_ephem.c,v 1.1 2006/05/24 16:42:42 gromeo Exp $
  */
 
 #include "orbitSim/read_ephem.h"
@@ -2525,8 +2525,17 @@ void doProfiled(double start, double end, double res, double *tms,
 
 
   osf.setMethod("doProfiled");
-  osf.info(2) << "Supposed to calculate Profiled Survey from "<<start<<" to "<<end<<"\n";
-  osf.info(2) << "The profile contains ncycles=" << ncycles << "\n";
+
+//   osf.info(2) << "\n\nProfiled Survey:\n";
+//   for(int i=0; i<sz; i++){
+//     osf.info(2) << i<<") Time: "<<tms[i]<<", Angle: "<<ofst[i]<<"\n";
+
+//   }
+//   osf.info(2) << "\n\nStart="<<start<<"\nend="<<end<<"\nLast Time tms[sz-1]="<<tms[sz-1]<<"\nResolution="<<res<<"\n";
+//   osf.info(2) << "Supposed to calculate Profiled Survey from "<<start<<" to "<<end<<"\n";
+//   osf.info(2) << "The profile contains ncycles=" << ncycles << "\n";
+
+//   exit(1);
 
   int nts = 0;
 
@@ -2701,16 +2710,18 @@ void doLimbTrace(EphemData *EphemPtr, double StartTime, double EndTime, double R
 
   int i, inum;
   int ns = 0, ne = 0;
+  std::vector <int> staocc(1);
+  std::vector <int> endocc(1);
 
   inum =  (int)((EndTime-StartTime+Resolution/2.)/Resolution);
   inum++; //GR increased number of data points by one;
 
-  const int sz = inum/4;
+  const int sz = inum/2;
+  staocc.resize(sz);
+  endocc.resize(sz);
 
 //   int staocc[sz];
 //   int endocc[sz];
-  std::vector <int> staocc(sz);
-  std::vector <int> endocc(sz);
 
   osf.setMethod("doLimbTrace");
 
