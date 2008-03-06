@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: glastrm  Thu Mar  6 12:37:05 PST 2008
+ScienceTools-scons/orbitSim
+
+Modified Files:
+	SConscript 
+Log Message:
+orbitSim has no test application
+    *
+------------------------------------------------------------
 TAG
 Tag name: orbitSim-00-01-03, operation: add
 Package: orbitSim
