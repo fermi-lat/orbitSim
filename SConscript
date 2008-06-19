@@ -1,4 +1,7 @@
-#$Id: SConscript,v 1.4 2008/02/26 05:19:02 glastrm Exp $
+# -*- python -*-
+# $Id: SConscript,v 1.5 2008/03/06 20:37:05 glastrm Exp $
+# Authors: Giuseppe Romeo <Giuseppe.Romeo@gsfc.nasa.gov>
+# Version: orbitSim-00-01-04
 Import('baseEnv')
 Import('listFiles')
 progEnv = baseEnv.Clone()
