@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: glastrm  Thu Jun 19 16:30:20 PDT 2008
+ScienceTools-scons/orbitSim
+
+Modified Files:
+	SConscript 
+Log Message:
+Added Author and Version fields
+    *
+------------------------------------------------------------
 TAG
 Tag name: orbitSim-00-01-04, operation: add
 Package: orbitSim
