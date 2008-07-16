@@ -1,5 +1,29 @@
 ------------------------------------------------------------
 TAG
+Tag name: ScienceTools-09-06-03, operation: add
+Package: orbitSim
+User: glastrm  Tue Jul 15 20:53:25 2008
+Files:
+  orbitSim/cmt/requirements  1.2
+  orbitSim/data/ft2.fits  1.1
+  orbitSim/doc/release.notes  1.9
+  orbitSim/orbitSim/functions.h  1.2
+  orbitSim/orbitSim/atFunctions.h  1.2
+  orbitSim/orbitSim/OrbSim.h  1.1.1.1
+  orbitSim/orbitSim/orbitSimStruct.h  1.1.1.1
+  orbitSim/orbitSim/read_ephem.h  1.1.1.1
+  orbitSim/orbitSim/DynamicStruct.h  1.2
+  orbitSim/pfiles/gttakosim.par  1.1
+  orbitSim/src/functUtil.cxx  1.3
+  orbitSim/src/mainpage.h  1.1.1.1
+  orbitSim/src/atFunctions.cxx  1.1.1.1
+  orbitSim/src/read_ephem.cxx  1.6
+  orbitSim/src/OrbSim.cxx  1.5
+  orbitSim/src/orbSim/main.cxx  1.4
+
+    *
+------------------------------------------------------------
+TAG
 Tag name: ScienceTools-09-06-02, operation: add
 Package: orbitSim
 User: glastrm  Mon Jul 14 08:46:52 2008
