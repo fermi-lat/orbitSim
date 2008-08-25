@@ -1,7 +1,7 @@
 # -*- python -*-
-# $Id: SConscript,v 1.6 2008/06/19 23:30:20 glastrm Exp $
+# $Id: SConscript,v 1.7 2008/08/25 19:05:40 peachey Exp $
 # Authors: John Vernaleo <John.C.Vernaleo@nasa.gov>
-# Version: orbitSim-00-01-04
+# Version: orbitSim-00-01-05
 Import('baseEnv')
 Import('listFiles')
 progEnv = baseEnv.Clone()
