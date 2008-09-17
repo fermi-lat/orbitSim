@@ -1,5 +1,13 @@
 ------------------------------------------------------------
 TAG
+Tag name: ScienceTools-09-07-00, operation: del
+Package: orbitSim
+User: glastrm  Wed Sep 17 13:12:11 2008
+Files:
+
+    *
+------------------------------------------------------------
+TAG
 Tag name: orbitSim-00-01-05, operation: add
 Package: orbitSim
 User: glastrm  Mon Aug 25 12:30:55 2008
