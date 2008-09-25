@@ -1,5 +1,17 @@
 ------------------------------------------------------------
 User: vernaleo  Thu Sep 25 10:20:28 PDT 2008
+orbitSim/orbitSim
+
+Modified Files:
+	DynamicStruct.h OrbSim.h atFunctions.h functions.h 
+	orbitSimStruct.h read_ephem.h 
+Added Files:
+	GLAST_slew_estimate.h 
+Log Message:
+Merge of new version of orbitSim for the FSSC
+    *
+------------------------------------------------------------
+User: vernaleo  Thu Sep 25 10:20:28 PDT 2008
 orbitSim/data
 
 Modified Files:
