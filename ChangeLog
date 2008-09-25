@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: vernaleo  Thu Sep 25 10:32:07 PDT 2008
+orbitSim/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+Modified build scripts to name executable gtorbsim
+    *
+------------------------------------------------------------
+User: vernaleo  Thu Sep 25 10:32:07 PDT 2008
 orbitSim
 
 Modified Files:
