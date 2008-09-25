@@ -4,7 +4,7 @@
  * @author Giuseppe Romeo
  * @date Created:  Nov 15, 2005
  * 
- * $Header: /nfs/slac/g/glast/ground/cvs/orbitSim/orbitSim/DynamicStruct.h,v 1.1.1.1 2007/07/19 19:12:39 peachey Exp $
+ * $Header:  Exp $
  */
 
 
@@ -32,6 +32,7 @@ extern "C" {
    * @date Last Modified:  Feb 08, 2006
    */
 
+  //typedef struct EphemData {
 struct EphemData {
 
   ///Default Constructor
@@ -81,6 +82,7 @@ struct EphemData {
    */
 
 
+  //typedef struct Attitude {
 struct Attitude {
 
   /// Default Constructor
