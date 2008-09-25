@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: vernaleo  Thu Sep 25 10:20:28 PDT 2008
+orbitSim/data
+
+Modified Files:
+	ft2.fits 
+Log Message:
+Merge of new version of orbitSim for the FSSC
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceTools-09-06-00, operation: del
 Package: orbitSim
