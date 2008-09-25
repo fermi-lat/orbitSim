@@ -3,7 +3,7 @@ package orbitSim
 version v0
 
 author John Vernaleo <John.C.Vernaleo@nasa.gov>
-# $Id: requirements,v 1.2 2007/07/19 20:17:46 peachey Exp $
+# $Id: requirements,v 1.3 2008/08/25 19:05:40 peachey Exp $
 
 use STpolicy *
 use st_app *
@@ -14,4 +14,4 @@ apply_pattern ST_library option=-no_share
 apply_pattern ST_pfiles
 
 private
-application gttakosim orbSim/*.cxx
+application gtorbsim orbSim/*.cxx
