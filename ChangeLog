@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: vernaleo  Thu Sep 25 10:32:07 PDT 2008
+orbitSim
+
+Modified Files:
+	SConscript 
+Log Message:
+Modified build scripts to name executable gtorbsim
+    *
+------------------------------------------------------------
 User: vernaleo  Thu Sep 25 10:20:28 PDT 2008
 orbitSim/src/orbSim
 
