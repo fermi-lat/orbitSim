@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: vernaleo  Thu Sep 25 10:20:28 PDT 2008
+orbitSim/src/orbSim
+
+Modified Files:
+	main.cxx 
+Log Message:
+Merge of new version of orbitSim for the FSSC
+    *
+------------------------------------------------------------
+User: vernaleo  Thu Sep 25 10:20:28 PDT 2008
 orbitSim/src
 
 Modified Files:
