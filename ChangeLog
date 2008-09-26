@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: vernaleo  Fri Sep 26 10:23:56 PDT 2008
+orbitSim/src
+
+Modified Files:
+	read_ephem.cxx 
+Log Message:
+Fixed some windows only compiler warnings
+    *
+------------------------------------------------------------
 TAG
 Tag name: orbitSim-01-00-00, operation: add
 Package: orbitSim
