@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: vernaleo  Wed May  6 08:25:37 PDT 2009
+orbitSim/src
+
+Modified Files:
+	OrbSim.cxx functUtil.cxx read_ephem.cxx 
+Log Message:
+Multiple updates to bring things up to date with FSSC version of orbitSim.  See release notes for v2r0 for more details.
+    *
+------------------------------------------------------------
+User: vernaleo  Wed May  6 08:25:37 PDT 2009
 orbitSim/pfiles
 
 Modified Files:
