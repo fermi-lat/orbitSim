@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: vernaleo  Tue Jun 23 10:51:25 PDT 2009
+orbitSim/src/orbSim
+
+Modified Files:
+	main.cxx 
+Log Message:
+Some minor updates from FSSC version.  Strictly code and comment cleanup, no functional changes.
+    *
+------------------------------------------------------------
+User: vernaleo  Tue Jun 23 10:51:25 PDT 2009
 orbitSim/src
 
 Modified Files:
