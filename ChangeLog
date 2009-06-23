@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: vernaleo  Tue Jun 23 10:51:24 PDT 2009
+orbitSim/orbitSim
+
+Modified Files:
+	functions.h 
+Log Message:
+Some minor updates from FSSC version.  Strictly code and comment cleanup, no functional changes.
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceTools-09-15-02, operation: add
 Package: orbitSim
