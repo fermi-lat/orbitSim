@@ -1,9 +1,9 @@
 package orbitSim
 
-version v0
+version v2r0p2
 
 author John Vernaleo <John.C.Vernaleo@nasa.gov>
-# $Id: requirements,v 1.3 2008/08/25 19:05:40 peachey Exp $
+# $Id: requirements,v 1.4 2008/09/25 17:32:07 vernaleo Exp $
 
 use STpolicy *
 use st_app *
