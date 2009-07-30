@@ -4,7 +4,7 @@
  * @author Giuseppe Romeo
  * @date Created:  Nov 15, 2005
  * 
- * $Header: /glast/GSSC/GSSC_Ext/OrbitSim/include/functions.h,v 1.1 2006/05/24 16:46:05 gromeo Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/orbitSim/orbitSim/functions.h,v 1.3 2008/09/25 17:20:28 vernaleo Exp $
  */
 
 
@@ -350,24 +350,6 @@ double do_mjd2met(double met);
    * @date Last Modified:  Feb 08, 2006
    */
 void precessionRM(double mjd, AtRotMat Rm);
-
-
-
-  /**
-   * @brief Function that checks if a specified string
-   * matches a specified regular expression pattern. The function
-   * returns zero if the match is not satisfied
-   * 
-   * @param string - input string 
-   * @param pattern - input regular expression pattern 
-   *
-   * @author Giuseppe Romeo
-   * @date Created:  Nov 15, 2005
-   */
-  //int match(const char *string, char *pattern);
-
-
-
 
 
 
