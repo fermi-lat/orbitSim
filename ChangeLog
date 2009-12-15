@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: vernaleo  Tue Dec 15 08:26:45 PST 2009
+orbitSim/src/orbSim
+
+Modified Files:
+	main.cxx 
+Log Message:
+Minor change to the output format for gtorbsim.  Columns that are not computed (and cannot be computed) by the orbitsimulator are now filled with NULLs to prevent anyone from confusing the dummy values with real values.
+    *
+------------------------------------------------------------
 User: vernaleo  Tue Dec 15 08:23:24 PST 2009
 orbitSim/doc
 
