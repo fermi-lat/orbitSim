@@ -2,6 +2,21 @@
 TAG
 Tag name: orbitSim-02-00-05, operation: add
 Package: orbitSim
+User: burnett  Tue May 18 05:47:16 2010
+Files:
+  orbitSim/src/functUtil.cxx  1.8
+  orbitSim/src/mainpage.h  1.1.1.1
+  orbitSim/src/atFunctions.cxx  1.2
+  orbitSim/src/read_ephem.cxx  1.10
+  orbitSim/src/OrbSim.cxx  1.9
+  orbitSim/src/GLAST_slew_estimate.cxx  1.1
+  orbitSim/src/orbSim/main.cxx  1.8
+
+    *
+------------------------------------------------------------
+TAG
+Tag name: orbitSim-02-00-05, operation: add
+Package: orbitSim
 User: burnett  Tue May 18 05:47:10 2010
 Files:
   orbitSim/pfiles/gtorbsim.par  1.2
