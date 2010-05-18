@@ -2,6 +2,15 @@
 TAG
 Tag name: orbitSim-02-00-05, operation: add
 Package: orbitSim
+User: burnett  Tue May 18 05:46:50 2010
+Files:
+  orbitSim/data/ft2.tpl  1.1
+
+    *
+------------------------------------------------------------
+TAG
+Tag name: orbitSim-02-00-05, operation: add
+Package: orbitSim
 User: burnett  Tue May 18 05:46:44 2010
 Files:
   orbitSim/cmt/requirements  1.6
