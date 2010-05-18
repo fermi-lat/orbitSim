@@ -1,4 +1,16 @@
 ------------------------------------------------------------
+TAG
+Tag name: orbitSim-02-00-05, operation: add
+Package: orbitSim
+User: burnett  Tue May 18 05:46:38 2010
+Files:
+  orbitSim/orbitSimLib.py  1.3
+  orbitSim/.cvsignore  1.1
+  orbitSim/ChangeLog  1.151
+  orbitSim/SConscript  1.19
+
+    *
+------------------------------------------------------------
 User: burnett  Tue May 18 05:46:31 PDT 2010
 orbitSim/doc
 
