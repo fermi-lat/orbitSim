@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: vernaleo  Mon Aug 16 12:44:45 PDT 2010
+orbitSim
+
+Modified Files:
+	SConscript 
+Log Message:
+Updating orbitSim to v02r00p06 to make Eric Winter the maintainer of it.
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceTools-09-18-00, operation: add
 Package: orbitSim
