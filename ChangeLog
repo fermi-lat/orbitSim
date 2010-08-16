@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: vernaleo  Mon Aug 16 12:44:45 PDT 2010
+orbitSim/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+Updating orbitSim to v02r00p06 to make Eric Winter the maintainer of it.
+    *
+------------------------------------------------------------
+User: vernaleo  Mon Aug 16 12:44:45 PDT 2010
 orbitSim/cmt
 
 Modified Files:
