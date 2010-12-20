@@ -2,6 +2,15 @@
 TAG
 Tag name: orbitSim-02-00-07, operation: add
 Package: orbitSim
+User: cohen  Mon Dec 20 11:36:23 2010
+Files:
+  orbitSim/cmt/requirements  1.7
+
+    *
+------------------------------------------------------------
+TAG
+Tag name: orbitSim-02-00-07, operation: add
+Package: orbitSim
 User: cohen  Mon Dec 20 11:36:14 2010
 Files:
   orbitSim/orbitSimLib.py  1.3
