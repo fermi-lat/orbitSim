@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: cohen  Mon Dec 20 11:30:14 PST 2010
+ScienceTools-scons/orbitSim/src
+
+Modified Files:
+	read_ephem.cxx functUtil.cxx 
+Log Message:
+fix gcc 4.4 build
+    *
+------------------------------------------------------------
 User: cohen  Mon Dec 20 11:30:13 PST 2010
 ScienceTools-scons/orbitSim/src/orbSim
 
