@@ -4,12 +4,13 @@
  * @author Giuseppe Romeo
  * @date Created:  Nov 15, 2005
  * 
- * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/orbitSim/src/functUtil.cxx,v 1.7 2009/12/16 23:21:34 elwinter Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/orbitSim/src/functUtil.cxx,v 1.8 2010/05/18 12:26:16 burnett Exp $
  */
 #include "orbitSim/functions.h"
 #include "orbitSim/atFunctions.h"
 #include "orbitSim/OrbSim.h"
 
+#include <cstdio>
 #include <cstdlib>
 #include <stdexcept>
 #include <string>

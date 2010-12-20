@@ -17,6 +17,7 @@
 #include "tip/IFileSvc.h"
 #include "tip/Table.h"
 
+#include <cstdio>
 #include <iostream>
 #include <iomanip>
 #include <string>
@@ -28,7 +29,7 @@
 #include "st_stream/st_stream.h"
 
 // Identify version tag.
-const std::string s_cvs_id("$Name:  $");
+const std::string s_cvs_id("$Name: ScienceTools-09-20-00 $");
 
 class orbitSimApp : public st_app::StApp {
   public:
