@@ -2,6 +2,15 @@
 TAG
 Tag name: orbitSim-02-00-07, operation: add
 Package: orbitSim
+User: cohen  Mon Dec 20 11:36:42 2010
+Files:
+  orbitSim/doc/release.notes  1.22
+
+    *
+------------------------------------------------------------
+TAG
+Tag name: orbitSim-02-00-07, operation: add
+Package: orbitSim
 User: cohen  Mon Dec 20 11:36:33 2010
 Files:
   orbitSim/data/ft2.tpl  1.1
