@@ -4,7 +4,7 @@
  * @author Giuseppe Romeo
  * @date Created:  Nov 15, 2005
  * 
- * $Header: /nfs/slac/g/glast/ground/cvs/orbitSim/src/read_ephem.cxx,v 1.8 2008/09/26 17:23:55 vernaleo Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/orbitSim/src/read_ephem.cxx,v 1.10 2009/06/23 17:51:24 vernaleo Exp $
  */
 
 #include "orbitSim/read_ephem.h"
@@ -16,6 +16,7 @@
 
 #include <stdexcept>
 #include <string>
+#include <cstdio>
 
 #include <iostream>
 #include <iomanip>
