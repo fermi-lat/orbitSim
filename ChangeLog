@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Tue Aug  7 07:47:52 PDT 2012
+orbitSim
+
+Modified Files:
+	SConscript 
+Log Message:
+stag/GoGui_auto-tag
+    *
+------------------------------------------------------------
 User: jchiang  Tue Aug  7 07:47:17 PDT 2012
 ScienceTools-scons/orbitSim/src/orbSim
 
