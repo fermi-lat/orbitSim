@@ -4,7 +4,7 @@
  * @author Giuseppe Romeo
  * @date Created:  Nov 15, 2005
  * 
- * $Header:  Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/orbitSim/orbitSim/DynamicStruct.h,v 1.3 2008/09/25 17:20:28 vernaleo Exp $
  */
 
 
@@ -128,6 +128,9 @@ struct Attitude {
 
   /// Boolean to specify if spacecraft is in occultation (1) or not (0)
   std::vector <int> in_occ;                       
+
+  // Rocking angle
+  std::vector<double> rockAngle;
                                
 
   /// Number of entries in each array
