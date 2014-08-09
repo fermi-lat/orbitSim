@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: asercion  Sat Aug  9 14:30:05 PDT 2014
+orbitSim/orbitSim
+
+Modified Files:
+	DynamicStruct.h OrbSim.h functions.h 
+Log Message:
+FSSC OrbitSim Updates
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceTools-09-34-01, operation: add
 Package: orbitSim
