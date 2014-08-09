@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: asercion  Sat Aug  9 14:30:05 PDT 2014
+orbitSim/src
+
+Modified Files:
+	OrbSim.cxx functUtil.cxx read_ephem.cxx 
+Log Message:
+FSSC OrbitSim Updates
+    *
+------------------------------------------------------------
+User: asercion  Sat Aug  9 14:30:05 PDT 2014
 orbitSim/pfiles
 
 Modified Files:
