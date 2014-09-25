@@ -4,7 +4,7 @@
  * @author Giuseppe Romeo
  * @date Created:  Nov 15, 2005
  * 
- * $Header: /nfs/slac/g/glast/ground/cvs/orbitSim/orbitSim/functions.h,v 1.4 2009/06/23 17:51:24 vernaleo Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/orbitSim/orbitSim/functions.h,v 1.5 2014/08/09 21:30:05 asercion Exp $
  */
 
 
@@ -434,6 +434,17 @@ void precessionRM(double mjd, AtRotMat Rm);
 
   int checkManZenith(const char *str);
 
+  /**
+   * @brief This function checks to see if the parsed line indicates the satellite is 
+   * going from a maneuver into an inertial point, and sets variables accordingly.
+   * 
+   * @param string - input string
+   * 
+   * @author Joe Asercion
+   * @date Created: September 7, 2014
+   */
+
+  int checkManInertial(const char *str);
 
 
   /**

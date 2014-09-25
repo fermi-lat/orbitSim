@@ -4,7 +4,7 @@
  * @author Giuseppe Romeo
  * @date Created:  Nov 15, 2005
  * 
- * $Header: /nfs/slac/g/glast/ground/cvs/orbitSim/src/functUtil.cxx,v 1.9 2010/12/20 19:30:14 cohen Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/orbitSim/src/functUtil.cxx,v 1.10 2014/08/09 21:30:05 asercion Exp $
  */
 #include <cstdio>
 #include "orbitSim/functions.h"
@@ -568,6 +568,67 @@ int checkManZenith(const char *str){
   return 1;
 }
 
+int checkManInertial(const char *str){
+
+
+  const int len = strlen(str);
+
+  char *ln;
+  ln = (char *) malloc((len+1) * sizeof(char));
+
+  strcpy(ln, str);
+  strcat(ln, "\0");
+
+  //Check to see if this line is one of the header lines containing the previous ASFL information
+  if (match_str(ln, "//") == 1) {
+    free(ln);
+    return 0;
+  }
+
+  if(checkDate(ln) != 1){
+    free(ln);
+    return 0;
+  }
+
+  char *str1 = processline(ln, '|');
+
+  while(str1[0] == ' '){
+    ++str1;
+  }
+
+  if(match_str(str1, "^Maneuver") != 1){
+    return 0;
+  }
+  
+  char *str2 = processline(str1, '|');
+
+  while(str2[0] == ' '){
+    ++str2;
+  }
+
+  if(match_str(str2, "^InertialPoint") != 1){
+    free(ln);
+    return 0;
+  }
+
+  //  int i = 0;
+  //  for(i=0; i<6; i++){
+  //    ++str2;
+  //  }
+
+  //  while(str2[0] == ' '){
+  //    ++str2;
+  //  }
+
+  //  if(match_str(str2, "^Point") != 1){
+  //    free(ln);
+  //    return 0;
+  //  }
+
+
+  free(ln);
+  return 1;
+}
 
 int checkDate(char *ln){
 
