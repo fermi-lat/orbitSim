@@ -4,7 +4,7 @@
  * @author Giuseppe Romeo
  * @date Created:  Nov 15, 2005
  * 
- * $Header: /nfs/slac/g/glast/ground/cvs/orbitSim/src/OrbSim.cxx,v 1.11 2014/09/25 19:05:02 asercion Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/orbitSim/src/OrbSim.cxx,v 1.12 2014/09/26 20:31:21 asercion Exp $
  */
 
 // These two libraries are needed for the regression tests
@@ -476,6 +476,9 @@ Attitude * makeAttTako(InitI *ini, EphemData *ephem) {
      losf.warn(1) << "WARNING: stop_mjd=" << ini->stop_MJD << " exceeds ATS Timeline End=" << tl_end << ". Orbitsim will only run up to mjd=" << tl_end << "\n";
      ini->stop_MJD = tl_end;
    }
+
+   memset(ln,'0',bufsz);
+   ITL=fopen(ini->TLname.c_str(),"r");
 
     // Removing initial part which is not used
     while(fgets(ln, bufsz, ITL)) {
