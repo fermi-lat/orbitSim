@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: asercion  Thu Oct  9 10:31:49 PDT 2014
+orbitSim/src
+
+Modified Files:
+	read_ephem.cxx OrbSim.cxx 
+Log Message:
+Changed TAKO timeline parsing to be less finicky and added comments throughout OrbSim.cxx
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceTools-09-34-03, operation: add
 Package: orbitSim
