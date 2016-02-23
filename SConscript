@@ -1,5 +1,5 @@
 # -*- python -*-
-# $Id: SConscript,v 1.26 2014/09/29 19:38:58 asercion Exp $
+# $Id: SConscript,v 1.27 2014/10/09 17:58:41 asercion Exp $
 # Authors: Eric Winter <Eric.L.Winter@nasa.gov>
 # Version: orbitSim-03-00-00
 Import('baseEnv')
@@ -16,4 +16,5 @@ progEnv.Tool('registerTargets', package = 'orbitSim',
              staticLibraryCxts = [[orbitSimLib, libEnv]],
              includes = listFiles(['orbitSim/*.h']),
              binaryCxts = [[gtorbsim, progEnv]],
+             data = listFiles(['data/*'], recursive=True),
              pfiles = listFiles(['pfiles/*.par']))
