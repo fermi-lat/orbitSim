@@ -1,9 +1,9 @@
 package orbitSim
 
-version v3r0p0
+version v3r0p1
 
 author Eric Winter <Eric.L.Winter@nasa.gov>
-# $Id: requirements,v 1.12 2014/09/29 19:38:58 asercion Exp $
+# $Id: requirements,v 1.13 2014/10/09 17:58:41 asercion Exp $
 
 use STpolicy *
 use st_app *
