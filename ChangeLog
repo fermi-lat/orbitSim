@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Tue Feb 23 08:37:27 PST 2016
+ScienceTools-scons/orbitSim
+
+Modified Files:
+	SConscript 
+Log Message:
+have ft2.tpl installed in common data directory
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceTools-10-00-05, operation: add
 Package: orbitSim
