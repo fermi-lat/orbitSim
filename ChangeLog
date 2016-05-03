@@ -1,5 +1,36 @@
 ------------------------------------------------------------
 TAG
+Tag name: ScienceTools-11-01-01, operation: add
+Package: orbitSim
+User: jchiang  Tue May  3 09:37:09 2016
+Files:
+  orbitSim/orbitSimLib.py  1.3
+  orbitSim/.cvsignore  1.1
+  orbitSim/ChangeLog  1.271
+  orbitSim/SConscript  1.29
+  orbitSim/cmt/requirements  1.14
+  orbitSim/data/ft2.tpl  1.1
+  orbitSim/doc/release.notes  1.29
+  orbitSim/orbitSim/functions.h  1.6
+  orbitSim/orbitSim/atFunctions.h  1.3
+  orbitSim/orbitSim/OrbSim.h  1.4
+  orbitSim/orbitSim/orbitSimStruct.h  1.3
+  orbitSim/orbitSim/GLAST_slew_estimate.h  1.1
+  orbitSim/orbitSim/read_ephem.h  1.3
+  orbitSim/orbitSim/DynamicStruct.h  1.4
+  orbitSim/pfiles/gtorbsim.par  1.3
+  orbitSim/src/functUtil.cxx  1.11
+  orbitSim/src/mainpage.h  1.1.1.1
+  orbitSim/src/atFunctions.cxx  1.2
+  orbitSim/src/read_ephem.cxx  1.14
+  orbitSim/src/OrbSim.cxx  1.14
+  orbitSim/src/GLAST_slew_estimate.cxx  1.1
+  orbitSim/src/orbSim/main.cxx  1.12
+  orbitSim/src/test/main.cxx  1.1
+
+    *
+------------------------------------------------------------
+TAG
 Tag name: ScienceTools-11-01-00, operation: add
 Package: orbitSim
 User: jchiang  Sat Apr 30 12:19:13 2016
