@@ -1,6 +1,6 @@
 # -*- python -*-
-# $Id: SConscript,v 1.28 2016/02/23 16:37:27 jchiang Exp $
-# Authors: Eric Winter <Eric.L.Winter@nasa.gov>
+# $Id: SConscript,v 1.29 2016/02/23 16:38:03 jchiang Exp $
+# Authors: Eric Winter <Eric.L.Winter@nasa.gov>, Alex Reustle <alexander.reustle@nasa.gov>
 # Version: orbitSim-03-00-01
 Import('baseEnv')
 Import('listFiles')
