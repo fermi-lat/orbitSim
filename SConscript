@@ -7,9 +7,10 @@ Import('listFiles')
 progEnv = baseEnv.Clone()
 libEnv = baseEnv.Clone()
 
-orbitSimLib = libEnv.StaticLibrary('orbitSim', listFiles(['src/*.cxx']))
-
+libEnv.AppendUnique(CCFLAGS = ['-std=c++11'])
 progEnv.AppendUnique(CCFLAGS = ['-std=c++11'])
+
+orbitSimLib = libEnv.StaticLibrary('orbitSim', listFiles(['src/*.cxx']))
 
 progEnv.Tool('orbitSimLib')
 gtorbsim = progEnv.Program('gtorbsim', listFiles(['src/orbSim/*.cxx']))
