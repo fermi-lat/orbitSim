@@ -11,7 +11,7 @@ orbitSimLib = libEnv.StaticLibrary('orbitSim', listFiles(['src/*.cxx']))
 
 progEnv.Tool('orbitSimLib')
 gtorbsim = progEnv.Program('gtorbsim', listFiles(['src/orbSim/*.cxx']))
-progEnv.Append(CPPFLAGS = ' -std=c++11')
+progEnv.Append(CCFLAGS = ['-std=c++11'])
 progEnv.Tool('registerTargets', package = 'orbitSim',
              staticLibraryCxts = [[orbitSimLib, libEnv]],
              includes = listFiles(['orbitSim/*.h']),
