@@ -7,6 +7,9 @@ Import('listFiles')
 progEnv = baseEnv.Clone()
 libEnv = baseEnv.Clone()
 
+#libEnv.AppendUnique(CCFLAGS = ['-std=c++11'])
+#progEnv.AppendUnique(CCFLAGS = ['-std=c++11'])
+
 orbitSimLib = libEnv.StaticLibrary('orbitSim', listFiles(['src/*.cxx']))
 
 progEnv.Tool('orbitSimLib')
