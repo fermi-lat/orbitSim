@@ -2,3 +2,5 @@ CVS/
 *.o
 *.so
 *.dylib
+*DS_Store
+_build
