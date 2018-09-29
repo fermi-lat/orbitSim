@@ -1,0 +1,8 @@
+get_filename_component(orbitSim_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+include(CMakeFindDependencyMacro)
+
+if(NOT TARGET ST::orbitSim)
+    include("${orbitSim_CMAKE_DIR}/orbitSimTargets.cmake")
+endif()
+
+set(orbitSim_LIBRARIES ST::orbitSim)
