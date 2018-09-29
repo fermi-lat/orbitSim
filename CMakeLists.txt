@@ -115,6 +115,8 @@ target_link_libraries(gtorbsim
     ST::stream
     ST::tip
 )
+set_target_properties(gtorbsim PROPERTIES
+  INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR}")
 
 ###############################################################################
 # orbitSim installation and exports
@@ -123,6 +125,7 @@ target_link_libraries(gtorbsim
 set(INSTALL_CONFIGDIR ${CMAKE_INSTALL_LIBDIR}/cmake/orbitSim)
 
 install(DIRECTORY orbitSim DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+install(FILES data/ft2.tpl DESTINATION refdata/fermi/orbitsim)
 
 install(TARGETS orbitSim gtorbsim
   RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}

@@ -4,3 +4,4 @@ CVS/
 *.dylib
 *DS_Store
 _build
+compile_commands.json

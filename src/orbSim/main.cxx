@@ -49,6 +49,7 @@ private:
 };
 
 void orbitSimApp::run() {
+
   using namespace tip;
   InitI  initf;
   int    stat;
@@ -63,17 +64,14 @@ void orbitSimApp::run() {
 
   st_app::AppParGroup& pars( getParGroup( "gtorbsim" ) );
 
-  int chat = pars["chatter"];
-  st_stream::SetMaximumChatter( chat );
-
-  bool debug_mode = pars["debug"];
-  st_stream::SetDebugMode( debug_mode );
+  st_stream::SetMaximumChatter( pars["chatter"] );
+  st_stream::SetDebugMode( pars["debug"] );
 
   double tEAA = pars["EAA"];
-  if ( tEAA >= 0.0 && tEAA <= 180.0 ) { initf.EAA = pars["EAA"]; }
+  if ( tEAA >= 0.0 && tEAA <= 180.0 ) initf.EAA = tEAA;
 
   double elt_start = pars["ELT_OFF_START"];
-  if ( elt_start > 0.0 ) { initf.ELT_OFF_START = pars["ELT_OFF_START"]; }
+  if ( elt_start > 0.0 ) initf.ELT_OFF_START = elt_start;
 
   osf.info().precision( 15 );
   osf.err().precision( 15 );
@@ -81,8 +79,7 @@ void orbitSimApp::run() {
   osf.out().precision( 15 );
 
   double elt_stop = pars["ELT_OFF_STOP"];
-
-  if ( elt_stop > 0.0 ) { initf.ELT_OFF_STOP = pars["ELT_OFF_STOP"]; }
+  if ( elt_stop > 0.0 ) initf.ELT_OFF_STOP = elt_stop;
 
   if ( ( initf.ELT_OFF_STOP != -99999.0 || initf.ELT_OFF_START != -99999.0 ) ) {
     if ( initf.ELT_OFF_STOP <= initf.ELT_OFF_START ) {
@@ -117,14 +114,22 @@ void orbitSimApp::run() {
   pars.Prompt( "typeinput" );
   std::string Input = pars["typeinput"];
   osf.info( 1 ) << "Input Type is: " << Input.c_str() << std::endl;
+
   if ( match_str( (const char*)Input.c_str(), "FILE" ) == 1 ) {
     pars.Prompt( "initFile" );
 
     std::string initFile = pars["initFile"];
     const char* fname    = initFile.c_str();
     stat                 = parseInit( fname, &initf );
-    initf.timeline.populate( initf.TLname );
+
+    if ( initf.TLtype == "TAKO" || initf.TLtype == "ASFLOWN" )
+      initf.timeline.populate( initf.TLname );
+
+    if ( initf.TLtype == "SINGLE" ) initf.TLname = initf.TLname;
+
+
   } else if ( match_str( (const char*)Input.c_str(), "CONSOLE" ) == 1 ) {
+
     pars.Prompt( "start_MJD" );
     initf.start_MJD = pars["start_MJD"];
 
