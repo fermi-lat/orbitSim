@@ -125,6 +125,7 @@ set_target_properties(gtorbsim PROPERTIES
 set(INSTALL_CONFIGDIR ${CMAKE_INSTALL_LIBDIR}/cmake/orbitSim)
 
 install(DIRECTORY orbitSim DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+install(DIRECTORY pfiles DESTINATION ${CMAKE_INSTALL_DATAROOTDIR})
 install(FILES data/ft2.tpl DESTINATION refdata/fermi/orbitsim)
 
 install(TARGETS orbitSim gtorbsim
