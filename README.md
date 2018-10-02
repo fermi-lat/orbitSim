@@ -10,6 +10,6 @@ reach github.com. The approach
  * `cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=~/.local ..`
  * `make -j 4`
  * `make install`
- * `export PFILES=${HOME}/pfiles:${PFILES}`
+ * `export PFILES=${HOME}/pfiles`
  * `export FERMI_INST_DIR=${HOME}/.local`
 
