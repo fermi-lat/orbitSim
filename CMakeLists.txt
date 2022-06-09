@@ -1,6 +1,6 @@
 ##### Library ######
 add_library(
-  orbitSim STATIC
+  orbitSim 
   src/atFunctions.cxx
   src/functUtil.cxx
   src/GLAST_slew_estimate.cxx
