@@ -2612,7 +2612,8 @@ void doProfiled(double start, double end, double res, double *tms,
 
   for(jc=0; jc<=ncycles+1; jc++){
     if(jc > 0){
-      Lincr += difincr*(difincr/(fabs(difincr)));
+      //Lincr += difincr*(difincr/(fabs(difincr)));
+      Lincr += difincr;
       if((int)fabs(Lincr) >= (int)(res*secInDay)){
 	tms[16] = Ltime+(Lincr/fabs(Lincr))*(double)((int)(res*secInDay));
 	Lincr -= (Lincr/fabs(Lincr))*(double)((int)(res*secInDay));
@@ -2748,6 +2749,12 @@ double InterpProfile(double *tms, double *ofst, double res){
     } else {
       Ltms[16] = tms[16]-(double)drem+(double)resS;
       difincr = -(double)drem+(double)resS;
+    // difincr should be negative if Ltms[16] > tms[16]
+    // i.e, if the interpolated profile is longer than the orginal profile,
+    // then the correction to the interpolated profile should shorten it
+    if(Ltms[16] > tms[16]){
+      difincr *= -1;
+        } 
     }
 
     if(Ltms[16] == Ltms[15]){
