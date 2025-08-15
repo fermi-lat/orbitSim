@@ -24,7 +24,7 @@ MJDREFF     = 7.428703703703703D-4           / Fractional part of MJD correspond
 OBSERVER    = 'none'                      / Simulated data, no observer really
 FILENAME    =                             / name of this file
 ORIGIN      = 'FSSC'                      / name of organization making file
-CREATOR     = 'gtorbsim'                  / software and version creating file
+CREATOR     = 'gtorbsim Fermitools 2.4.1' / software and version creating file
 VERSION     = '0'                         / release version of the file
 DATASUM     = 0                           / checksum for data table
 END
