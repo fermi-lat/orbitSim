@@ -15,6 +15,8 @@ target_include_directories(
 )
 
 ###### Executables ######
+set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
+
 add_executable(gtorbsim src/orbSim/main.cxx)
 target_link_libraries(gtorbsim PRIVATE orbitSim)
 
