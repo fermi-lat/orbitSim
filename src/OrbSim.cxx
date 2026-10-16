@@ -17,7 +17,7 @@
 #include "orbitSim/functions.h"
 
 #include <cstdlib>
-#include <stdio.h>
+#include <cstdio>
 #include <algorithm>
 #include <stdexcept>
 #include <string>
@@ -35,7 +35,7 @@
 st_stream::StreamFormatter losf("OrbSim", "", 2);
 
 // Parse the initial parameters passed from the top level main function.
-int parseInit( const char *fname, InitI *inA) {
+auto parseInit( const char *fname, InitI *inA) -> int {
 
   FILE *inf;
   char ln[bufsz];
@@ -350,7 +350,7 @@ int parseInit( const char *fname, InitI *inA) {
 }
 
 
-char *processline(char *ln, char find) {
+auto processline(char *ln, char find) -> char * {
 
   char *first_ptr;
   char *last_ptr ;
@@ -391,7 +391,7 @@ char *processline(char *ln, char find) {
 
 
 // makeAttTako does all of the heavy lifting for the TAKO timeline attitude calculation
-Attitude * makeAttTako(InitI *ini, EphemData *ephem) {
+auto makeAttTako(InitI *ini, EphemData *ephem) -> Attitude * {
 
   // Create and Open regression test file object first (Todo: Handle this better later.) ~JA 20140908
   std::ofstream	takoTestFile;
@@ -959,7 +959,7 @@ Attitude * makeAttTako(InitI *ini, EphemData *ephem) {
 
 
 // makeAttAsFl does all of the heavy lifting for the AsFlown timeline attitude calculation
-Attitude * makeAttAsFl(InitI *ini, EphemData *ephem) {
+auto makeAttAsFl(InitI *ini, EphemData *ephem) -> Attitude * {
 
   std::ofstream asflTestFile;
   asflTestFile.open ("ASFLAttitude.out");
@@ -1493,7 +1493,7 @@ Attitude * makeAttAsFl(InitI *ini, EphemData *ephem) {
 
 }
 
-double parseAsFline(char *ln, int *mode, double *val1, double *val2){
+auto parseAsFline(char *ln, int *mode, double *val1, double *val2) -> double{
 
   double mjd;
 
@@ -1532,7 +1532,7 @@ double parseAsFline(char *ln, int *mode, double *val1, double *val2){
 
 
 
-Attitude * doCmd(InitI *ini, EphemData *ephem) {
+auto doCmd(InitI *ini, EphemData *ephem) -> Attitude * {
 
   FILE *OutF = NULL;
 

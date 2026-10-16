@@ -23,7 +23,7 @@
 #include <iomanip>
 #include <string>
 #include <stdexcept>
-#include <time.h>
+#include <ctime>
 
 #include "st_stream/Stream.h"
 #include "st_stream/StreamFormatter.h"

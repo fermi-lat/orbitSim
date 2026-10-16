@@ -30,7 +30,7 @@ st_stream::StreamFormatter fosf("functUtil", "", 2);
 /*  This is a julian date routine, converting any calender date to
     Modified Julian Date.  It is adapted from numerical recipes */
 
-double do_cal2mjd(int iyyy, int mm, int id, int hour, int min, int sec)
+auto do_cal2mjd(int iyyy, int mm, int id, int hour, int min, int sec) -> double
 {
   long jul;
   int ja, jy, jm;
@@ -153,7 +153,7 @@ void do_mjd2utc(double mjd, int *yyy, int *doy, int *hh, int *mm, int *ss){
 }
 
 
-double do_utcj2mjd (int iyyy, int doy, int hour, int min, int sec)
+auto do_utcj2mjd (int iyyy, int doy, int hour, int min, int sec) -> double
 {
   /* The following array contains the last day of year
      in that month (index 3 is March and day of year 90 is Mar 31), adjust for 
@@ -208,7 +208,7 @@ double do_utcj2mjd (int iyyy, int doy, int hour, int min, int sec)
 
 }
 
-double do_met2mjd(double met) {
+auto do_met2mjd(double met) -> double {
 
   double mjd = met/secInDay + MJDREF;
 
@@ -216,7 +216,7 @@ double do_met2mjd(double met) {
 
 }
 
-double do_mjd2met(double mjd) {
+auto do_mjd2met(double mjd) -> double {
 
   double met = (mjd - MJDREF)*secInDay;
 
@@ -224,7 +224,7 @@ double do_mjd2met(double mjd) {
 
 }
 
-double getMJD(char *ln){
+auto getMJD(char *ln) -> double{
 
   // Removing initial backslashes and space
   char *jnk = ln;
@@ -252,7 +252,7 @@ double getMJD(char *ln){
 
 
 
-int match_str(const char *string, const char *pattern) {
+auto match_str(const char *string, const char *pattern) -> int {
 
   const int len = strlen(pattern);
   const int slen = strlen(string);
@@ -372,7 +372,7 @@ int match_str(const char *string, const char *pattern) {
 
 
 
-char * capitalize_str(const char *str, const int len) {
+auto capitalize_str(const char *str, const int len) -> char * {
 
   int i=1;
   char c;
@@ -391,7 +391,7 @@ char * capitalize_str(const char *str, const int len) {
 }
 
 
-int match2str(const char *string, const char *pattern1, const char *pattern2) {
+auto match2str(const char *string, const char *pattern1, const char *pattern2) -> int {
 
   const int len = strlen(string);
 
@@ -465,7 +465,7 @@ int match2str(const char *string, const char *pattern1, const char *pattern2) {
 //since regular expressions cannot be used in Win32
 
 
-int checkManeuver(const char *str){
+auto checkManeuver(const char *str) -> int{
 
   const int len = strlen(str);
 
@@ -506,7 +506,7 @@ int checkManeuver(const char *str){
 
 //match((const char*) ln, "^[0-9]{4}-[0-9]{3}-[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{6}[ ]*[|][ ]*Maneuver[ ]*[|][ ]*Zenith[ ]*Point[ ]*[|]")
 
-int checkManZenith(const char *str){
+auto checkManZenith(const char *str) -> int{
 
 
   const int len = strlen(str);
@@ -568,7 +568,7 @@ int checkManZenith(const char *str){
   return 1;
 }
 
-int checkManInertial(const char *str){
+auto checkManInertial(const char *str) -> int{
 
 
   const int len = strlen(str);
@@ -630,7 +630,7 @@ int checkManInertial(const char *str){
   return 1;
 }
 
-int checkDate(char *ln){
+auto checkDate(char *ln) -> int{
 
 
   int datelen = 23;
@@ -679,7 +679,7 @@ int checkDate(char *ln){
 
 
 
-int chkStr (char *str) {
+auto chkStr (char *str) -> int {
 
   const int len = strlen(str);
   int i = 0;
@@ -722,7 +722,7 @@ int chkStr (char *str) {
 
 
 
-double InterPVect(double y1, double y2, double x1, double x2, double x0) {
+auto InterPVect(double y1, double y2, double x1, double x2, double x0) -> double {
 
   double a, b, y0;
 
@@ -1284,7 +1284,7 @@ void getXYZ(AtVect r1, AtVect r2, double t1, double t2, double *consts, AtVect x
 
 
 
-double getDet(AtVect ra, AtVect rb, AtVect rc) {
+auto getDet(AtVect ra, AtVect rb, AtVect rc) -> double {
 
   double det;
 
@@ -1357,7 +1357,7 @@ void getslewtime(double pra, double pdec, double ra, double dec, double res, dou
  *      RaDec[6], RaDec[7]: Satellite body x-axis direction
  *      Return the angle in radians 
  */ 
-double GetPointedRock(double RaDec[4])
+auto GetPointedRock(double RaDec[4]) -> double
 {
     /* The rock angle is the angle separation between the satellite
      * body z-axis and the zenith direction. */
@@ -1617,7 +1617,7 @@ void GetPointedPos(double mjd, AtVect vSat, AtVect vNVel,
    points as being potential points in the saa polygon.
 */ 
 
-int find_minmax(double *lon, double *lat, int num_saa, double *minLon, double *maxLon, double *minLat, double *maxLat){ 
+auto find_minmax(double *lon, double *lat, int num_saa, double *minLon, double *maxLon, double *minLat, double *maxLat) -> int{ 
   int i=0;
 
   fosf.setMethod("find_minmax");
@@ -1646,8 +1646,8 @@ int find_minmax(double *lon, double *lat, int num_saa, double *minLon, double *m
 /* CKS:  calculate_slopes determines the slope and intercept for every line which
    makes up the saa polynomial. (Note: longitude is y axis, latitude the x axis)
 */
-int calculate_slopes(double *lon, double *lat, int num_saa, double *slopes,
-		     double *intercepts) {
+auto calculate_slopes(double *lon, double *lat, int num_saa, double *slopes,
+		     double *intercepts) -> int {
   int i;
   fosf.setMethod("find_minmax");
   if (num_saa < 3) { 
@@ -1672,10 +1672,10 @@ int calculate_slopes(double *lon, double *lat, int num_saa, double *slopes,
 
 
 
-int pt_in_polygon(double dlat, double dlon,
+auto pt_in_polygon(double dlat, double dlon,
 		  double lattable[], double lontable[],
 		  double slopes[], double intercepts[], int num_saa,
-		  double minLon, double maxLon, double minLat, double maxLat) {
+		  double minLon, double maxLon, double minLat, double maxLat) -> int {
   int i, numBoundaries=0;
   if ( dlon < minLon || dlon > maxLon) { return 0; }
   else if (dlat < minLat || dlat > maxLat) { return 0; }
@@ -1735,8 +1735,8 @@ int pt_in_polygon(double dlat, double dlon,
  *   1 = TLE found, returned in atElemTle *tle
  *   0 = Error generating ephemeris
  */
-int readTLE(const int Nl, char* CheckSatName, char ln[][100], 
-	    atElemTle *tle, double sta, double sto, double resol){
+auto readTLE(const int Nl, char* CheckSatName, char ln[][100], 
+	    atElemTle *tle, double sta, double sto, double resol) -> int{
 
   /*  Function prototypes */
 
@@ -1957,27 +1957,27 @@ void correctTm(AtTime *tz){
 }
 
 
-double cube(double x)
+auto cube(double x) -> double
 {
 	x = pow(x , 3.0);
 	return x;
 }
 
 
-double sqr(double x)
+auto sqr(double x) -> double
 {
 	x *= x;
 	return x;
 }
 
 
-double fmod2p (double x)
+auto fmod2p (double x) -> double
 {
 	x = modulus (x, 2.0 * _pi );
 	return x;
 }
 
-double modulus (double arg1, double arg2)
+auto modulus (double arg1, double arg2) -> double
 {
 	double modu;
 	modu = arg1 - floor(arg1/arg2) * arg2;

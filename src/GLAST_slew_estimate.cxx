@@ -8,8 +8,8 @@ Translated from MATLAB
 
 */
 
-#include <stdio.h>
-#include <math.h>
+#include <cstdio>
+#include <cmath>
 //#include <tgmath.h>  // floor ceil
 #include "orbitSim/atFunctions.h"
 #include "orbitSim/GLAST_slew_estimate.h"
@@ -25,8 +25,8 @@ void  VaryingEigAxisSlewAngleEst(double ra_s,double  dec_s,
 				 double ra_f, double dec_f, 
 				 double *xz_slew_angle, double *y_slew_angle);
 
-double interp_Angle2Time(double y_slew_angle, double xz_slew_angle,
-			 double total_time[][end+1], double theta_y_mesh[][end+1], double theta_xz_mesh[][end+1]);
+auto interp_Angle2Time(double y_slew_angle, double xz_slew_angle,
+			 double total_time[][end+1], double theta_y_mesh[][end+1], double theta_xz_mesh[][end+1]) -> double;
 
 
 /* mesh tables */
@@ -326,10 +326,10 @@ double theta_xz_mesh [end+1][end+1] =
 
 
 
-double GLAST_slew_estimate ( double ra_s, double dec_s, // sun coordinates (radians)
+auto GLAST_slew_estimate ( double ra_s, double dec_s, // sun coordinates (radians)
 			     double ra_i, double dec_i, // initial pointing
 			     double ra_f, double dec_f // final pointing
-			     )
+			     ) -> double
 {
  double duration;
  double xz_slew_angle, y_slew_angle;
@@ -704,8 +704,8 @@ xyz_i = [(r_x_i);
 // mesh_x ~= theta_y_mesh
 // mesh_y ~= theta_xz_mesh
 
-double interp_Angle2Time(double input_x, double input_y,
-			 double mesh_data[end+1][end+1], double mesh_x[end+1][end+1], double mesh_y[end+1][end+1])
+auto interp_Angle2Time(double input_x, double input_y,
+			 double mesh_data[end+1][end+1], double mesh_x[end+1][end+1], double mesh_y[end+1][end+1]) -> double
 {
   double duration = 0.0;
 

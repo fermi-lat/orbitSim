@@ -31,7 +31,7 @@
 st_stream::StreamFormatter osf("read_ephem", "", 2);
 
 
-EphemData * allocateEphem(int num ) {
+auto allocateEphem(int num ) -> EphemData * {
 
   EphemData *eph = new EphemData;
 
@@ -49,7 +49,7 @@ EphemData * allocateEphem(int num ) {
   return eph;
 }
 
-EphemData * deallocateEphem(EphemData *eph) {
+auto deallocateEphem(EphemData *eph) -> EphemData * {
 
 
   eph->MJD.clear();
@@ -67,7 +67,7 @@ EphemData * deallocateEphem(EphemData *eph) {
 
 }
 
-Attitude * deallocateAttitude (Attitude *att) {
+auto deallocateAttitude (Attitude *att) -> Attitude * {
 
 
   att->mjd.clear();
@@ -99,7 +99,7 @@ Attitude * deallocateAttitude (Attitude *att) {
 
 
 
-Attitude * allocateAttitude(int num) {
+auto allocateAttitude(int num) -> Attitude * {
 
   unsigned int size = num;
   Attitude *att = new Attitude;
@@ -136,7 +136,7 @@ Attitude * allocateAttitude(int num) {
 
 }
 
-Attitude * reallocateAttitude(int num, Attitude *att) {
+auto reallocateAttitude(int num, Attitude *att) -> Attitude * {
   att->mjd.resize(num);
   att->X.resize(num);
   att->Y.resize(num);
@@ -166,8 +166,8 @@ Attitude * reallocateAttitude(int num, Attitude *att) {
 
 
 
-EphemData * yyyy_eph(FILE *ifp, double StartTime, double EndTime,
-		     double Units, double Resolution) {
+auto yyyy_eph(FILE *ifp, double StartTime, double EndTime,
+		     double Units, double Resolution) -> EphemData * {
 
   int YYYY, MM, DD, HH, Min, Sec;
   int i, tyear, tmonth, tday, thour, tmin, tsec, it, iret;
@@ -343,8 +343,8 @@ EphemData * yyyy_eph(FILE *ifp, double StartTime, double EndTime,
    Swift ephem also includes the velocity RA and DEC of the satellite. 
 */ 
 
-EphemData * xyzll_eph(FILE *ifp, double StartTime, double EndTime,
-		     double Units, double Resolution) {
+auto xyzll_eph(FILE *ifp, double StartTime, double EndTime,
+		     double Units, double Resolution) -> EphemData * {
 
   
   int i, tyear, tdoy, thour, tmin, it, iret, isec;
@@ -529,8 +529,8 @@ EphemData * xyzll_eph(FILE *ifp, double StartTime, double EndTime,
 
 
 
-EphemData * tlederive(FILE *ifp, double StartTime,
-		      double EndTime, double Units, double Resolution) {
+auto tlederive(FILE *ifp, double StartTime,
+		      double EndTime, double Units, double Resolution) -> EphemData * {
 
   EphemData * ephemeris = NULL;
 
@@ -2261,8 +2261,8 @@ void doSurvey(double start, double end, double res, double ira, double idec,
 
 
 
-int getEndPoint (double mjdi, double *mjds, double ira, double idec, 
-		 Attitude *LAtt, int idx, double start, double res){
+auto getEndPoint (double mjdi, double *mjds, double ira, double idec, 
+		 Attitude *LAtt, int idx, double start, double res) -> int{
 
   int ntr = 0;
   double theta = 0.0;
@@ -2576,7 +2576,7 @@ void doProfiled(double start, double end, double res, double *tms,
   double angsep, slewr;
   double epoch = start;
 
-  double InterpProfile(double *tms, double *ofst, double res);
+  auto InterpProfile(double *tms, double *ofst, double res) -> double;
 
   double difincr = InterpProfile(tms, ofst, res);
 
@@ -2694,7 +2694,7 @@ void doProfiled(double start, double end, double res, double *tms,
 
 
 
-double InterpProfile(double *tms, double *ofst, double res){
+auto InterpProfile(double *tms, double *ofst, double res) -> double{
 
 
 

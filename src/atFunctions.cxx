@@ -25,10 +25,10 @@
 
 
 
-int                         /* Making an Inverse Rotation Matrix     */
+auto                         /* Making an Inverse Rotation Matrix     */
 atInvRotMat(                /*                 ver 1.0  92/07/01  ay */
 	    AtRotMat rm,    /* input: rotation matrix */
-	    AtRotMat rm2)   /* output: inversed rotation matrix */
+	    AtRotMat rm2) -> int   /* output: inversed rotation matrix */
 { 
   int   i1, i2;
   for (i1=0; i1<3; i1++) {
@@ -45,10 +45,10 @@ atInvRotMat(                /*                 ver 1.0  92/07/01  ay */
  *						n.kawai 93.01.13
  */
 
-int atRMProd(
+auto atRMProd(
 	AtRotMat rm0,	/* input: rotation matrix to be multiplied*/
 	AtRotMat rm1,	/* input: rotation matrix to multiply*/
-	AtRotMat rm2)	/* output: product */
+	AtRotMat rm2) -> int	/* output: product */
 {
     int i,j, k;
     
@@ -69,12 +69,12 @@ int atRMProd(
 /* 
  * examine earth occultation of specified direction (YEARTH)
  */
-int atEarthOccult(
+auto atEarthOccult(
 	AtVect satVect,	/* input: satellite pos. in equatorial coord. */ 
 	AtVect xVect,	/* input: direction to be examined. (normalized) */ 
 	AtVect sunVect,	/* input: vector to the sun */
 	int *flag, 	/* output: condition 0:sky, 1:dark, 2:bright earth */
-	double *el)	/* output: elevation angle of z from the earth edge */ 
+	double *el) -> int	/* output: elevation angle of z from the earth edge */ 
 {
     double earthSize, xDist, dot, zCross, satDistance;
     AtRotMat rm;
@@ -108,10 +108,10 @@ int atEarthOccult(
 } 
 
 
-int                     /* Making an inverse vector        */
+auto                     /* Making an inverse vector        */
 atInvVect(              /*          ver 1.0  92/07/01      */
         AtVect x,       /* in: vector */
-        AtVect y)       /* out: reversed vector */
+        AtVect y) -> int       /* out: reversed vector */
 { 
   y[0] = -x[0];  y[1] = -x[1];  y[2] = -x[2];
   return (NORMAL_END);
@@ -121,8 +121,8 @@ atInvVect(              /*          ver 1.0  92/07/01      */
 /* 
  * Absolute size of A VECTOR.
  */
-double atNorm(	/* output: normalized vector*/
-	AtVect x)	/* input: vector */
+auto atNorm(	/* output: normalized vector*/
+	AtVect x) -> double	/* input: vector */
 {
     return sqrt(atScalProd(x, x) );
 } 
@@ -132,9 +132,9 @@ double atNorm(	/* output: normalized vector*/
 /* 
  * calc Scalar Product (Naiseki, Dot-prooduct) of two vectors 
  */
-double atScalProd(	/* output: scaler (inner) product of x and y */
+auto atScalProd(	/* output: scaler (inner) product of x and y */
 	AtVect x, 	/* input */
-	AtVect y)	/* input */
+	AtVect y) -> double	/* input */
 
 {
   return (x[0]*y[0] + x[1]*y[1] + x[2]*y[2]);
@@ -142,11 +142,11 @@ double atScalProd(	/* output: scaler (inner) product of x and y */
 
 
 
-int                 /* Finding angular distance                 */
+auto                 /* Finding angular distance                 */
 atAngDistance(      /*                   ver 1.0   92/07/01  ay */
         AtVect x,   /* input: */
         AtVect y,   /* input: */
-        double *r)  /* output: angular distance between x and y in radian */
+        double *r) -> int  /* output: angular distance between x and y in radian */
 {
   double  d1;
   d1 = ( x[0]*y[0] + x[1]*y[1] + x[2]*y[2] ) / atNorm(x) / atNorm(y) ;
@@ -161,10 +161,10 @@ atAngDistance(      /*                   ver 1.0   92/07/01  ay */
 /* 
  * ROTATION MATRIX defined by New Z-axis and a vector in (+)X-Z half plane.
  */
-int atSetRotMatZX(
+auto atSetRotMatZX(
 	AtVect zAxis,	/* input: vector defining new z-axis */
 	AtVect xAxis,	/* input: vector in new +X-Z half plane */
-	AtRotMat rm)	/* output: rotation matrix */
+	AtRotMat rm) -> int	/* output: rotation matrix */
 {
     AtVect x, y, z, yAxis;
     int i, code;
@@ -184,11 +184,11 @@ int atSetRotMatZX(
 
 
 
-int                     /* Making a vector prodact          */
+auto                     /* Making a vector prodact          */
 atVectProd(             /*           ver 1.0  92/07/01  ay  */
         AtVect x,       /* input */
         AtVect y,       /* input */
-        AtVect z)       /* output: vector (outer) product of x and y */
+        AtVect z) -> int       /* output: vector (outer) product of x and y */
 {
   z[0] = x[1]*y[2] - x[2]*y[1];
   z[1] = x[2]*y[0] - x[0]*y[2];
@@ -198,10 +198,10 @@ atVectProd(             /*           ver 1.0  92/07/01  ay  */
 
 
 
-int atEllipsoido(
+auto atEllipsoido(
 	AtPolarVect *xp, /* input: vector in celestial coordinate */ 
 	double *latt,	/* output: latitude on the earth surface */
-	double *heigh)	/* output: altitude from the earth surface */
+	double *heigh) -> int	/* output: altitude from the earth surface */
 	
 {
     /* Initialized data */
@@ -233,10 +233,10 @@ int atEllipsoido(
     return 0;
 }
 
-int atGeodetic(
+auto atGeodetic(
 	double mjd,	/* input: time in MJD */
 	AtVect x,	/* input: vector in sidereal equatorial coordinate */ 
-	AtVect y)	/* output: vector in geodetic coordinate at mjd , 
+	AtVect y) -> int	/* output: vector in geodetic coordinate at mjd , 
 			i.e. x-axis at (long, lat)=(0,0), and z at N-pole*/ 
 {
     int code1;
@@ -253,9 +253,9 @@ int atGeodetic(
  */
 
 
-int atSetGeoRM(
+auto atSetGeoRM(
 	double mjd,	/* input: time in MJD */
-	AtRotMat rm)	/* output: rotation matrix  from J2000 to geographic,
+	AtRotMat rm) -> int	/* output: rotation matrix  from J2000 to geographic,
 			i.e. x-axis at (long, lat)=(0,0), and z at N-pole*/ 
 	
 {
@@ -271,9 +271,9 @@ int atSetGeoRM(
 /* 
  * calc Greenwich sidereal time (KOSEJI)
  */
-int atSidereal(
+auto atSidereal(
 	double mjd,		/* input: time in MJD */
-	double *gsttod) 	/* output: Greenwich sidereal time (radian)
+	double *gsttod) -> int 	/* output: Greenwich sidereal time (radian)
 				 at mjd true of date*/ 
 {
     /* Local variables */
@@ -291,10 +291,10 @@ int atSidereal(
  * CALC MATRIX FOR Rotation of coordinate with AXIS AND ROLL ANGLE.
  */
  
-int atSetRotMat(
+auto atSetRotMat(
 	AtVect axis,	/* input: rotation axis of coord, should be non zero*/
 	double roll,	/* input: roll angle around axis (radian) */
-	AtRotMat rm)	/* output: rotation matrix */
+	AtRotMat rm) -> int	/* output: rotation matrix */
 {
     AtVect normAxis;
     double cosRoll, c1, sinRoll;
@@ -318,8 +318,8 @@ int atSetRotMat(
 
 /* Converting the coordinate from Cartesian to Polar (RECPOL) */
 
-int           
-atVectToPol( AtVect x, AtPolarVect *y) {
+auto           
+atVectToPol( AtVect x, AtPolarVect *y) -> int {
   double  norm01, c, s;
   norm01 = x[0]*x[0] + x[1]*x[1];
   if ( (y->r = sqrt( norm01 + x[2]*x[2] )) == 0.0 ) { 
@@ -343,9 +343,9 @@ atVectToPol( AtVect x, AtPolarVect *y) {
  *             			ver 1.5  93/01/26  n.kawai    
  */
  
-int atNormVect(
+auto atNormVect(
 	   AtVect x,       /* input:  vector */	 
-	   AtVect y)       /* output: normalized vector*/ 
+	   AtVect y) -> int       /* output: normalized vector*/ 
 {  
   int    k1;
   double nrm = x[0]*x[0]+x[1]*x[1]+x[2]*x[2];
@@ -369,10 +369,10 @@ int atNormVect(
  * ROTATE A VECTOR WITH ROTATION MATRIX.
  */
 
-int atRotVect(
+auto atRotVect(
 	AtRotMat rm,	/* input: rotation matrix */
 	AtVect x,	/* input: vector */
-	AtVect y)	/* output: vector */
+	AtVect y) -> int	/* output: vector */
 {
     int i,j;
     
@@ -387,7 +387,7 @@ int atRotVect(
 
 /* calculates ra and dec of sun for mjd, returns as a 3-vect */
 
-int atSun(double mjd, AtVect pos)
+auto atSun(double mjd, AtVect pos) -> int
 {
   /* taken from Christina William's version of Frank Marshall's version
      of the 1994 nautical almanac page c24, accurate to 0.01 degrees
@@ -440,10 +440,10 @@ int atSun(double mjd, AtVect pos)
 
 
 
-int            /* Converting the coordinate from Polar to Cartesian (POLREC) */
+auto            /* Converting the coordinate from Polar to Cartesian (POLREC) */
 atPolToVect(   /*                           ver 1.0  92/07/01  ay            */
         AtPolarVect *x,         /* input */
-        AtVect y)               /* output: result */
+        AtVect y) -> int               /* output: result */
 {
   y[0] = x->r * cos( x->lat ) * cos( x->lon );
   y[1] = x->r * cos( x->lat ) * sin( x->lon );
@@ -455,10 +455,10 @@ atPolToVect(   /*                           ver 1.0  92/07/01  ay            */
 /*     Originally coded in fortran (MJULIA) by K.Mitsuda.              */
 /*     Translated in C and revised by A.Yoshida for ASTRO-D.           */
 /*                                                                     */
-int               /* Converting UT to Modified Julian Day (MJULIA)     */
+auto               /* Converting UT to Modified Julian Day (MJULIA)     */
 atMJulian(        /*                            ver 1.0  92/07/02  ay  */
         AtTime *time,          /* input:  yr,mo,dy,hr,mn,sc,ms */
-        double *mjd)           /* output: Modified Julian Day */
+        double *mjd) -> int           /* output: Modified Julian Day */
      /* Note: Day of the week is given by ( (mjd+3)%7 )  (0=SUN, 1=MON, etc) */
 {
   double  y,m,d;
@@ -477,11 +477,11 @@ atMJulian(        /*                            ver 1.0  92/07/02  ay  */
 /* 
  * convert equatorial coordinate systems correcting for precession (SAISA)
  */
-int atPrecession(
+auto atPrecession(
 	double mjd0,	/* input: modified Julian Day */
 	AtVect x0,	/* input: vector in equatorial coordiante at mjd0 */ 
 	double mjd,	/* input: modified Julian Day */
-	AtVect x)	/* output: vector in equatorial coordiante at mjd1 */ 
+	AtVect x) -> int	/* output: vector in equatorial coordiante at mjd1 */ 
 {
     AtRotMat rm;
 
@@ -495,10 +495,10 @@ int atPrecession(
  * Find Rotation Matrix for conversion of equatorial coordinate systems
  * correcting for precession (SAISA)
  */
-int atPrecessRM(
+auto atPrecessRM(
 	double mjd0,	/* input: modified Julian Day for the original coord*/
 	double mjd,	/* input: modified Julian Day for the new coord*/
-	AtRotMat rm)	/* output: rotation matrix to correct precession*/
+	AtRotMat rm) -> int	/* output: rotation matrix to correct precession*/
 {
   AtRotMat RmAto2000, RmBto2000, Rm2000toB;
 
@@ -516,10 +516,10 @@ int atPrecessRM(
  *			           		 ver 1.5  93/01/25  n.kawai  
  */
 
-int atMultVect(
+auto atMultVect(
 	double f,	/* in: multiplicand for x */
 	AtVect x,	/* in: vector */
-	AtVect z)	/* out: answer*/
+	AtVect z) -> int	/* out: answer*/
 {
     z[0] = f*x[0];
     z[1] = f*x[1];
