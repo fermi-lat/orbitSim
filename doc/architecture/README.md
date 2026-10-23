@@ -168,7 +168,7 @@ None. `gtorbsim` is not wrapped by `sane`'s `gt_apps`.
 
 No `getenv` calls. `getDataPath("orbitSim")` resolves through
 `FERMI_INST_DIR` (see `src/facilities/doc/architecture/` and "Runtime
-environment" in `docs/architecture/README.md`).
+environment" in ScienceTools' `docs/architecture/README.md`).
 
 ### File formats
 
@@ -196,7 +196,10 @@ environment" in `docs/architecture/README.md`).
   `TakoAttitude.out`/`ASFLAttitude.out` against reference files
   `TakoAttRef`/`ASFLAttRef`. It is **not in `CMakeLists.txt`** (nor in the
   old `SConscript`), and the reference files are not in the repository.
-  In effect the package has no automated tests. Exercise changes by
+  In effect the package has no automated tests: ScienceTools'
+  `recipe/tests/ST-unit-test` never lists orbitSim (neither list), and
+  `fermitools-data` has no `outrefFiles/orbitSim` (see "Testing" in
+  ScienceTools' `docs/architecture/README.md`). Exercise changes by
   running `gtorbsim` with a `SINGLE`/`SURVEY` command and a TLE, and
   inspecting the FT2 file (for example with `gtltcube` or `fv`).
 - **Legacy:** `SConscript`, `orbitSimLib.py`, `.cvsignore`,
